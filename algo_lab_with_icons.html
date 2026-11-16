@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Подготовка к контрольной</title>
+<style>
+:root{--bg:#08090b;--panel:#151619;--panel2:#1c1d20;--line:#38393d;--text:#f4f4f2;--muted:#929397;--accent:#e8e8e5;--lime:#d8ff67;--green:#9bdfb2;--red:#ff8a91}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -35%,#292a2c 0,transparent 55%),#08090b;color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;letter-spacing:-.015em}
+button,input,textarea{font:inherit}button{cursor:pointer}.shell{max-width:1440px;margin:auto;padding:30px 46px 72px}.top{display:flex;justify-content:space-between;align-items:center;padding:10px 0 24px;border-bottom:1px solid #28292c}.brand{font-size:13px;letter-spacing:.2em;font-weight:750}.brand span{color:#aaa}.topnote{font-size:11px;color:#85868a;letter-spacing:.14em}
+.hero{padding:48px 0 28px;max-width:900px}.eyebrow{font-size:10px;color:#9a9b9e;letter-spacing:.2em;text-transform:uppercase}.hero h1{font-size:clamp(42px,5vw,66px);line-height:1.02;letter-spacing:-.065em;margin:12px 0 13px;font-weight:650}.hero p{max-width:760px;color:#a3a4a7;font-size:15px;margin:0}.dashboard{display:grid;grid-template-columns:1.05fr 1.05fr 1.6fr;gap:14px;margin:26px 0 16px}.tile,.mode{border:1px solid #414246;background:linear-gradient(145deg,#202124,#17181a);border-radius:25px;box-shadow:inset 0 1px #ffffff0b,0 12px 35px #0003;transition:transform .24s cubic-bezier(.2,.8,.2,1),border-color .24s,background .24s}.tile{min-height:170px;padding:21px 23px;position:relative;overflow:hidden}.tile:hover,.mode:hover{transform:translateY(-3px);border-color:#77787b}.tilelabel{color:#a7a8ab;font-size:12px}.tilevalue{font-size:43px;letter-spacing:-.06em;margin:6px 0 0}.tilefoot{position:absolute;bottom:19px;color:#9a9b9e;font-size:12px}.activity{grid-column:span 1;display:flex;flex-direction:column;justify-content:space-between}.months{display:flex;justify-content:space-between;color:#bdbec0;font-size:11px}.heat{display:flex;gap:5px;align-items:center}.heat span{display:grid;grid-template-columns:repeat(9,7px);gap:4px}.heat i{width:7px;height:7px;border-radius:50%;background:#45464a}.heat i:nth-child(3n){background:#77787c}.heat i:nth-child(5n){background:#b5b6b8}.activity .tilefoot{position:static}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}.mode{padding:23px 25px;min-height:184px;position:relative}.mode .num{font-size:10px;color:#9b9c9f;letter-spacing:.2em}.mode h2{font-size:25px;margin:12px 0 5px;letter-spacing:-.045em;font-weight:620}.mode p{color:#a2a3a6;margin:0 0 18px;max-width:510px;font-size:13px}.btn{border:1px solid #e7e7e4;border-radius:999px;background:#e7e7e4;color:#101113;font-weight:650;padding:11px 19px;transition:transform .2s,background .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px);background:#fff;box-shadow:0 7px 24px #fff2}.btn.secondary{background:#27282b;color:#f2f2f0;border-color:#55565a}.btn.ghost{background:transparent;color:#aaa;border-color:#414246}.btn:disabled{opacity:.35;cursor:not-allowed;transform:none}.meta{display:flex;gap:18px;flex-wrap:wrap;color:#88898d;font-size:11px;margin-top:15px}.meta b{color:#e8e8e6;font-weight:650}.small{font-size:12px;color:#85868a}
+.screen{display:none;animation:rise .34s cubic-bezier(.2,.8,.2,1) both}.screen.active{display:block}@keyframes rise{from{opacity:0;transform:translateY(12px) scale(.995)}to{opacity:1;transform:none}}.back{border:0;background:none;color:#999;padding:8px 0;margin:10px 0 22px}.back:hover{color:white}.screenhead{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:24px}.screenhead h2{font-size:35px;letter-spacing:-.055em;margin:5px 0;font-weight:620}.screenhead p{color:#999;margin:0}.pill{border:1px solid #414246;border-radius:999px;padding:7px 12px;color:#aaa;font-size:11px;white-space:nowrap}
+.progress{height:3px;background:#2c2d30;border-radius:10px;overflow:hidden;margin:16px 0 26px}.progress i{display:block;height:100%;background:#eee;width:0;transition:width .35s cubic-bezier(.2,.8,.2,1)}.card{background:linear-gradient(145deg,#1c1d20,#131416);border:1px solid #414246;border-radius:25px;padding:clamp(22px,3vw,36px);max-width:950px;box-shadow:inset 0 1px #ffffff0b,0 20px 60px #0004}.qtop{display:flex;justify-content:space-between;color:#999;font-size:10px;letter-spacing:.14em;text-transform:uppercase}.qtitle{font-size:clamp(20px,2.2vw,27px);line-height:1.35;letter-spacing:-.03em;margin:24px 0}.choices{display:grid;grid-template-columns:1fr 1fr;gap:10px}.choice{display:flex;align-items:flex-start;gap:12px;text-align:left;width:100%;padding:14px;border-radius:15px;border:1px solid #414246;background:#202124;color:#e2e2e0;transition:.18s}.choice:hover{border-color:#898a8d;background:#292a2d;transform:translateY(-1px)}.choice .letter{width:25px;height:25px;border:1px solid #595a5e;border-radius:50%;display:grid;place-items:center;flex:none;font-size:11px;color:#aaa}.choice.selected{border-color:#e9e9e6;background:#303134}.choice.correct{border-color:var(--green);background:#1a2820}.choice.wrong{border-color:var(--red);background:#2a1b1e}.answerbox{width:100%;min-height:58px;resize:vertical;background:#101113;border:1px solid #44454a;border-radius:14px;color:white;padding:14px;outline:none}.answerbox:focus{border-color:#b9babd;box-shadow:0 0 0 3px #ffffff0c}.feedback{display:none;margin-top:18px;border-radius:15px;padding:15px 17px;background:#202124;border:1px solid #414246}.feedback.show{display:block;animation:rise .2s}.feedback.good{border-color:#4b7959}.feedback.bad{border-color:#85484d}.feedback b{display:block;margin-bottom:4px}.feedback p{margin:0;color:#c1c1c2}.actions{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:22px}
+.exam-intro{color:#a0a1a4;max-width:900px}.section{margin:25px 0 12px;padding:17px 21px;border:1px solid #414246;border-radius:17px;background:linear-gradient(120deg,#202124,#17181a)}.section h3{margin:0 0 4px;font-size:17px}.section p{margin:0;color:#999;font-size:12px}.task{padding:22px 0;border-bottom:1px solid #292a2d}.task:last-child{border:0}.taskno{color:#aaa;font-size:10px;letter-spacing:.14em}.task h4{font-size:16px;line-height:1.5;margin:8px 0 12px;font-weight:570}.task .hint{font-size:11px;color:#85868a;margin:-5px 0 12px}.task textarea{min-height:110px}.exambar{position:sticky;bottom:12px;background:#1b1c1feF;backdrop-filter:blur(22px);border:1px solid #4a4b50;border-radius:18px;padding:13px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:24px;box-shadow:0 10px 40px #0009}.toast{color:var(--green);font-size:13px}.hidden{display:none!important}.resultbox{padding:24px;border:1px solid #414246;border-radius:20px;background:#17181a;margin-top:20px}.resultbox h3{font-size:25px;margin:0 0 8px}.resultbox p{color:#aaa}.footer{border-top:1px solid #28292c;margin-top:55px;padding-top:18px;color:#696a6e;font-size:11px;display:flex;justify-content:space-between;gap:10px}
+@media(max-width:850px){.shell{padding:20px 18px 60px}.dashboard{grid-template-columns:1fr 1fr}.activity{grid-column:span 2}.grid{grid-template-columns:1fr}.choices{grid-template-columns:1fr}.screenhead{align-items:start;flex-direction:column}.exambar{align-items:flex-start;flex-direction:column}.exambar .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Liquid Glass dock: layered optical surface + subtle refraction */
+.dock{--dock-x:50%;--dock-y:0%;position:fixed;z-index:100;left:50%;bottom:max(22px,env(safe-area-inset-bottom));transform:translateX(-50%);width:min(390px,calc(100vw - 32px));height:76px;padding:7px;display:grid;grid-template-columns:repeat(3,1fr);align-items:stretch;gap:5px;border-radius:27px;isolation:isolate;overflow:hidden;background:rgba(32,34,38,.40);border:1px solid rgba(255,255,255,.25);box-shadow:0 18px 55px rgba(0,0,0,.48),0 3px 12px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.45),inset 0 -1px 0 rgba(255,255,255,.08);backdrop-filter:blur(28px) saturate(190%);-webkit-backdrop-filter:blur(28px) saturate(190%);}
+.dock:before{content:"";position:absolute;inset:0;z-index:-2;border-radius:inherit;background:linear-gradient(145deg,rgba(255,255,255,.24),rgba(255,255,255,.035) 28%,rgba(255,255,255,.015) 62%,rgba(255,255,255,.13));pointer-events:none}
+.dock:after{content:"";position:absolute;z-index:-1;inset:-35% -10%;border-radius:inherit;background:radial-gradient(ellipse at var(--dock-x) var(--dock-y),rgba(255,255,255,.34),transparent 35%),linear-gradient(112deg,transparent 22%,rgba(255,255,255,.10) 48%,transparent 72%);mix-blend-mode:screen;pointer-events:none;transition:opacity .3s}
+.dock-active-glow{position:absolute;z-index:0;left:7px;top:7px;bottom:7px;width:calc((100% - 24px)/3);border-radius:21px;background:linear-gradient(145deg,rgba(255,255,255,.30),rgba(255,255,255,.10));border:1px solid rgba(255,255,255,.24);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 3px 14px rgba(0,0,0,.15);pointer-events:none;transition:transform .58s cubic-bezier(.22,1,.36,1),width .35s}
+.dock-item{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-width:0;padding:6px 4px;border:0;border-radius:20px;background:transparent;color:rgba(245,245,245,.62);font-size:10px;font-weight:600;letter-spacing:-.01em;transition:color .25s,transform .35s cubic-bezier(.2,.8,.2,1);-webkit-tap-highlight-color:transparent}
+.dock-item svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;transition:transform .42s cubic-bezier(.2,.9,.2,1),filter .3s}
+.dock-item:hover{color:#fff;transform:translateY(-1px)}.dock-item:active{transform:scale(.93)}.dock-item.active{color:#fff}.dock-item.active svg{color:#f4d52f;filter:drop-shadow(0 0 7px rgba(244,213,47,.3));transform:translateY(-1px) scale(1.06)}
+@supports (backdrop-filter:url(#liquidDisplacement) blur(2px)){.dock{backdrop-filter:url(#liquidDisplacement) blur(2px) saturate(185%);-webkit-backdrop-filter:url(#liquidDisplacement) blur(2px) saturate(185%)}}
+.glass-filters{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+.shell{padding-bottom:145px}
+/* Profile dashboard inspired by the supplied habit-tracker reference */
+.profile-screen{max-width:1100px}.profile-topline{display:flex;justify-content:space-between;align-items:center;margin:8px 0 32px}.profile-person{display:flex;align-items:center;gap:13px}.avatar{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#f6df57,#bba62c);color:#171717;font-size:18px;font-weight:800;border:2px solid rgba(255,255,255,.5);box-shadow:0 0 0 3px rgba(245,216,55,.12)}.profile-date{font-size:12px;color:#9c9da1}.profile-person h2{font-size:19px;line-height:1.2;margin:2px 0 0;letter-spacing:-.04em}.profile-chip{font-size:9px;letter-spacing:.13em;color:#aaa;border:1px solid #414247;border-radius:999px;padding:7px 10px;background:#ffffff05}.profile-welcome{margin-bottom:22px}.profile-welcome h1{font-size:clamp(32px,5vw,48px);letter-spacing:-.065em;line-height:1;margin:0 0 8px}.profile-welcome p{margin:0;color:#929397;font-size:13px}.profile-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}.metric-card{min-height:132px;padding:18px 20px;border-radius:22px;background:linear-gradient(145deg,#222326,#17181a);border:1px solid #3c3d41;box-shadow:inset 0 1px rgba(255,255,255,.05);display:flex;flex-direction:column}.metric-card span{color:#aaa;font-size:11px}.metric-card strong{font-size:34px;line-height:1.15;letter-spacing:-.06em;margin:10px 0 4px}.metric-card small{color:#85868a;font-size:10px;margin-top:auto}.profile-panel{padding:21px;border-radius:23px;background:linear-gradient(145deg,#202124,#17181a);border:1px solid #3d3e42;box-shadow:inset 0 1px rgba(255,255,255,.05),0 14px 35px #0002}.activity-panel{margin-bottom:13px}.panel-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:19px}.panel-heading h3{font-size:16px;margin:0 0 3px;letter-spacing:-.035em}.panel-heading p{font-size:11px;color:#8d8e92;margin:0}.activity-calendar{display:flex;gap:10px;overflow:hidden}.weekday-labels{display:grid;grid-template-rows:repeat(7,12px);gap:5px;padding-top:1px;color:#77787c;font-size:9px}.calendar-grid{display:grid;grid-auto-flow:column;grid-template-rows:repeat(7,12px);grid-auto-columns:minmax(0,1fr);gap:5px;flex:1}.calendar-grid i{display:block;border-radius:3px;background:#303126;min-width:0;transition:background .25s,transform .25s}.calendar-grid i.level1{background:#5b5523}.calendar-grid i.level2{background:#988525}.calendar-grid i.level3{background:#d1b72b}.calendar-grid i.level4{background:#f3d52f;box-shadow:0 0 9px #f3d52f35}.calendar-legend{display:flex;align-items:center;justify-content:flex-end;gap:5px;color:#777;font-size:9px;margin-top:14px}.calendar-legend i{width:9px;height:9px;border-radius:3px;background:#303126}.calendar-legend i:nth-of-type(2){background:#5b5523}.calendar-legend i:nth-of-type(3){background:#988525}.calendar-legend i:nth-of-type(4){background:#f3d52f}.profile-lower{display:grid;grid-template-columns:1fr 1fr;gap:13px}.mini-avatar{width:34px;height:34px;border-radius:12px;background:#343127;color:#f3d52f;display:grid;place-items:center;font-weight:700}.profile-name-panel label{display:block;color:#85868a;font-size:9px;letter-spacing:.14em;margin:10px 0 7px}.name-row{display:flex;gap:8px}.name-row .answerbox{min-width:0;min-height:44px;padding:10px 12px}.name-row .btn{padding:9px 14px;white-space:nowrap;font-size:11px;background:#f3d52f;border-color:#f3d52f}.profile-saved{font-size:10px;color:#b8d9a7;min-height:16px;margin-top:7px}.exam-progress-panel .panel-heading strong{font-size:26px;color:#f3d52f}.profile-progress{height:6px;background:#333438;border-radius:20px;overflow:hidden;margin:16px 0 9px}.profile-progress i{display:block;width:0;height:100%;background:linear-gradient(90deg,#b9a222,#f3d52f);border-radius:inherit;transition:width .4s}.exam-progress-panel>small{font-size:10px;color:#888}.profile-history{font-size:10px;color:#999;margin-top:13px;padding-top:12px;border-top:1px solid #333438;line-height:1.7}
+@media(max-width:700px){
+ .shell{padding:16px 14px calc(112px + env(safe-area-inset-bottom))}
+ .hero{padding:30px 0 18px}
+ .hero h1{font-size:clamp(38px,12vw,54px)}
+ .hero p{font-size:14px}
+ .dashboard{grid-template-columns:1fr 1fr;gap:9px}
+ .tile{min-height:138px;padding:16px;border-radius:20px}
+ .tilevalue{font-size:34px}
+ .activity{grid-column:span 2}
+ .grid{grid-template-columns:1fr;gap:10px}
+ .mode{padding:20px;border-radius:21px;min-height:0}
+ .mode h2{font-size:22px}
+ .screenhead h2{font-size:30px}
+ .choices{grid-template-columns:1fr}
+ .card{padding:19px;border-radius:21px}
+ .qtitle{font-size:20px;margin:18px 0}
+ .actions{align-items:stretch;flex-direction:column}
+ .actions .btn{width:100%}
+ .profile-metrics{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+ .metric-card{padding:13px 11px;min-height:118px;border-radius:17px}
+ .metric-card strong{font-size:27px}
+ .profile-lower{grid-template-columns:1fr}
+ .profile-panel{padding:17px;border-radius:19px}
+ .profile-topline{margin:3px 0 25px}
+ .profile-welcome h1{font-size:37px}
+ .dock{bottom:max(9px,env(safe-area-inset-bottom));width:calc(100vw - 28px);max-width:430px;height:70px;padding:6px;border-radius:24px}
+ .dock-active-glow{left:6px;top:6px;bottom:6px;width:calc((100% - 22px)/3)}
+ .dock-item{font-size:9px;gap:4px}
+ .exambar{position:static}
+}
+@media(max-width:390px){.dashboard{grid-template-columns:1fr}.activity{grid-column:auto}.profile-metrics{grid-template-columns:1fr 1fr}.metric-card:last-child{grid-column:span 2}.profile-chip{font-size:8px}.name-row{flex-direction:column}.name-row .btn{width:100%}}
+
+
+/* Cool monochrome + ice-blue visual system */
+:root{--bg:#080b10;--panel:#151a22;--panel2:#1b2330;--line:#354253;--text:#f4f7fb;--muted:#9ba9ba;--accent:#dcecff;--lime:#9ecbff;--green:#8bd8bd;--red:#ff929c}
+body{background:radial-gradient(ellipse at 50% -35%,#26364a 0,transparent 58%),#080b10}
+.btn{background:#dcecff;border-color:#dcecff;color:#101722}.btn:hover{background:#fff;box-shadow:0 7px 24px #9ecbff25}.btn.secondary{background:#263447;color:#eaf4ff;border-color:#52677f}.btn.ghost{color:#b9cce2;border-color:#43566e}
+.tile,.mode,.card,.section,.profile-panel,.metric-card,.profile-card{background:linear-gradient(145deg,#202a38,#141b25);border-color:#344357}
+.choice{background:#1c2735;border-color:#394b60}.choice:hover{border-color:#91b9e8;background:#25364a}.choice.selected{border-color:#9ecbff;background:#2a3c53}
+.progress i{background:linear-gradient(90deg,#77aeea,#dcecff)}
+/* Telegram-like floating liquid capsule */
+.dock{width:min(330px,calc(100vw - 34px));height:72px;padding:7px;border-radius:999px;background:rgba(23,31,43,.48);border:1px solid rgba(220,237,255,.28);box-shadow:0 18px 55px #0009,0 2px 10px #0005,inset 0 1px 1px #ffffff55,inset 0 -1px 1px #ffffff12;backdrop-filter:blur(34px) saturate(210%);-webkit-backdrop-filter:blur(34px) saturate(210%);overflow:visible}
+.dock:before{inset:0;border-radius:999px;background:linear-gradient(145deg,#ffffff30,#ffffff08 36%,#9ecbff0b 70%,#ffffff1d)}
+.dock:after{inset:-15%;border-radius:999px;filter:blur(3px);background:radial-gradient(ellipse at var(--dock-x) var(--dock-y),#d9edff55,transparent 38%),linear-gradient(110deg,transparent 25%,#ffffff16 50%,transparent 75%)}
+.dock-active-glow{left:7px;top:7px;bottom:7px;width:calc((100% - 28px)/3);border-radius:999px;background:radial-gradient(circle at 35% 20%,#ffffff55,transparent 65%),linear-gradient(145deg,#9fcaff52,#d9eaff20);border:1px solid #d7eaff60;box-shadow:inset 0 1px 2px #ffffff70,0 0 18px #8bbfff26;transition:transform .62s cubic-bezier(.2,1.25,.35,1)}
+.dock-item{border-radius:999px;color:#b8c5d5;font-size:10px}.dock-item.active{color:#f5faff}.dock-item.active svg{color:#b9dcff;filter:drop-shadow(0 0 8px #91c5ff75);transform:scale(1.13)}
+.dock-item svg{width:22px;height:22px}
+.profile-top-actions{display:flex;align-items:center}.edit-profile-btn{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(143,184,229,.12);border:1px solid #7189a655;color:#dcecff;backdrop-filter:blur(12px);transition:transform .2s,background .2s}.edit-profile-btn:hover{transform:scale(1.07);background:#8db9eb2b}.edit-profile-btn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.avatar{overflow:hidden;background:linear-gradient(145deg,#d9eaff,#789cc4);color:#142033;border-color:#dcecff66;box-shadow:0 0 0 3px #9ecbff20}.avatar img,.avatar-edit-row img{width:100%;height:100%;object-fit:cover;border-radius:inherit}.profile-metrics{grid-template-columns:repeat(4,minmax(0,1fr))}.metric-card strong{color:#e5f1ff}.profile-chip{color:#c0d2e6;border-color:#43566c}.calendar-grid i{background:#273342}.calendar-grid i.level1{background:#435e7d}.calendar-grid i.level2{background:#648bb6}.calendar-grid i.level3{background:#8eb9e8}.calendar-grid i.level4{background:#c6e2ff;box-shadow:0 0 9px #9ecbff55}.calendar-legend i{background:#273342}.calendar-legend i:nth-of-type(2){background:#435e7d}.calendar-legend i:nth-of-type(3){background:#648bb6}.calendar-legend i:nth-of-type(4){background:#c6e2ff}.exam-progress-panel .panel-heading strong{color:#c6e2ff}.profile-progress i{background:linear-gradient(90deg,#6798c9,#c6e2ff)}
+.profile-modal{display:none;position:fixed;inset:0;z-index:200;align-items:center;justify-content:center;padding:20px}.profile-modal.open{display:flex}.profile-modal-backdrop{position:absolute;inset:0;background:#02060dcc;backdrop-filter:blur(12px)}.profile-modal-card{position:relative;width:min(430px,100%);padding:27px;border-radius:28px;border:1px solid #7189a655;background:linear-gradient(145deg,#202d3dF2,#111923F5);box-shadow:0 30px 100px #000b,inset 0 1px #ffffff20;animation:rise .25s both}.profile-modal-card h3{font-size:23px;margin:0 0 4px}.profile-modal-card>p{color:#9eafc3;font-size:12px;margin:0 0 22px}.modal-close{position:absolute;right:16px;top:13px;border:0;background:#ffffff12;color:#dcecff;border-radius:50%;width:30px;height:30px;font-size:21px}.avatar-edit-row{display:flex;align-items:center;gap:15px;margin:0 0 18px}.avatar-edit-row img{width:68px;height:68px;border-radius:50%;border:1px solid #9ecbff66;background:#27384b}.avatar-edit-row>div{display:flex;flex-direction:column;align-items:flex-start;gap:7px}.avatar-edit-row .btn{padding:8px 13px;font-size:11px}.text-action{border:0;background:none;color:#9ebde0;font-size:11px;padding:2px}.profile-modal-card label{display:block;color:#9eafc3;font-size:9px;letter-spacing:.15em;margin:0 0 7px}.profile-modal-card .answerbox{background:#0e1621;border-color:#43566e}.profile-modal-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:17px}.profile-modal-actions .btn{padding:10px 16px}
+@media(max-width:700px){.profile-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.dock{height:70px;width:min(330px,calc(100vw - 28px));border-radius:999px}.dock-active-glow{border-radius:999px}.activity-calendar{gap:7px}.calendar-grid{gap:3px;grid-template-rows:repeat(7,10px)}.weekday-labels{grid-template-rows:repeat(7,10px)}.profile-modal-card{padding:23px}}
+
+</style>
+
+<meta name="theme-color" content="#08090b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Алгоритмы">
+<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+<link rel="manifest" href="./manifest.json">
+</head>
+<body><main class="shell">
+<section id="home" class="screen active">
+ <div class="hero"><h1>Подготовка<br>к контрольной.</h1><p>Рабочее пространство для подготовки к контрольной: теория, вычисления, доказательства и анализ алгоритмов. Основной акцент — не угадать ответ, а уметь вывести его самостоятельно.</p></div>
+ <div class="dashboard">
+  <article class="tile"><div class="tilelabel">Вопросов в тесте</div><div class="tilevalue">55</div><div class="tilefoot">Пять тематических разделов</div></article>
+  <article class="tile"><div class="tilelabel">Заданий в контрольной</div><div class="tilevalue">28</div><div class="tilefoot">Теория, вычисления и доказательства</div></article>
+ </div>
+ <div class="grid">
+  <article class="mode"><h2>Режим теста</h2><p>55 вопросов, включая задачи на вычисление показателя Master theorem, суммы, амортизированную стоимость и разбор доказательств. Мгновенная проверка с объяснением.</p><button class="btn" onclick="startQuiz()">Начать тест →</button><div class="meta"><span><b>55</b> вопросов</span><span><b>5</b> разделов</span><span>обратная связь</span></div></article>
+  <article class="mode"><h2>Контрольная работа</h2><p>28 заданий: самостоятельное применение Master theorem, три метода амортизационного анализа, доказательства, сортировки и splay-деревья.</p><button class="btn secondary" onclick="startExam()">Открыть контрольную →</button><div class="meta"><span><b>28</b> заданий</span><span>без подсказок</span><span>экспорт TXT</span></div></article>
+ </div>
+ 
+</section>
+
+<section id="profile" class="screen profile-screen">
+ <div class="profile-topline">
+  <div class="profile-person"><div class="avatar" id="profileAvatar">?</div><div><div class="profile-date" id="profileDate">Сегодня</div><h2 id="profileGreeting">Ученик</h2></div></div>
+  <div class="profile-top-actions"><button class="edit-profile-btn" onclick="openProfileEditor()" aria-label="Изменить профиль" title="Изменить профиль"><svg viewBox="0 0 24 24"><path d="m14.5 5.5 4 4M4 20l4.2-.9L19 8.3a2.1 2.1 0 0 0-3-3L5.2 16.1 4 20Z"/></svg></button></div>
+ </div>
+ <div class="profile-welcome"><h1>Твой прогресс.</h1><p>Подготовка к контрольной по анализу алгоритмов.</p></div>
+ <div class="profile-metrics">
+  <article class="metric-card"><span>Пройдено тестов</span><strong id="statAttempts">0</strong><small>завершённых попыток</small></article>
+  <article class="metric-card"><span>Лучший результат</span><strong id="statBest">—</strong><small>точность ответов</small></article>
+  <article class="metric-card"><span>Средний результат</span><strong id="statAvg">—</strong><small>средняя точность всех тестов</small></article>
+  <article class="metric-card"><span>Последняя попытка</span><strong id="statLast">—</strong><small id="statLastDate">пока нет результатов</small></article>
+ </div>
+ <article class="profile-panel activity-panel">
+  <div class="panel-heading"><div><h3>Активность</h3><p>Твои последние 12 недель</p></div><span class="profile-chip">ПОСЛЕДНИЕ 84 ДНЯ</span></div>
+  <div class="activity-calendar"><div class="weekday-labels"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div><div class="calendar-grid" id="profileCalendar"></div></div>
+  <div class="calendar-legend"><span>Меньше</span><i></i><i></i><i></i><i></i><span>Больше</span></div>
+ </article>
+ <div class="profile-lower">
+  <article class="profile-panel exam-progress-panel"><div class="panel-heading"><div><h3>Контрольная</h3><p>Заполнение ответов</p></div><strong id="statExam">0%</strong></div><div class="profile-progress"><i id="profileExamBar"></i></div><small id="statExamFoot">Ответы ещё не экспортировались</small><div class="profile-history" id="profileHistory">Здесь появятся последние результаты тестов.</div></article>
+ </div>
+</section>
+
+<section id="quiz" class="screen">
+ <button class="back" onclick="goHome()">← На главную</button>
+ <div class="screenhead"><div><h2>Проверка знаний</h2><p id="quizSub">Вопросы перемешаны.</p></div><div class="pill" id="quizCount">01 / 55</div></div>
+ <div class="progress"><i id="quizProgress"></i></div>
+ <div class="card">
+  <div class="qtop"><span id="qTopic">Асимптотика</span><span id="qType">Выбор ответа</span></div>
+  <div class="qtitle" id="qText"></div>
+  <div id="qChoices" class="choices"></div>
+  <div id="qInputWrap" class="hidden"><input id="qInput" class="answerbox" placeholder="Введи ответ (например, Θ(n log n))" autocomplete="off"></div>
+  <div id="qFeedback" class="feedback"><b id="fbTitle"></b><p id="fbText"></p></div>
+  <div class="actions"><span class="small" id="qStatus">Ответь, чтобы продолжить</span><button class="btn" id="checkBtn" onclick="checkQuiz()">Проверить ответ</button><button class="btn hidden" id="nextBtn" onclick="nextQuiz()">Следующий вопрос →</button></div>
+ </div>
+ <div id="quizEnd" class="resultbox hidden"></div>
+</section>
+<section id="exam" class="screen">
+ <button class="back" onclick="goHome()">← На главную</button>
+ <div class="screenhead"><div><h2>Контрольная работа</h2><p>Пиши ход решения. Одного числа без объяснения там, где требуется обоснование, недостаточно.</p></div><div class="pill">28 заданий · 5 разделов</div></div>
+ <div class="exam-intro">Работа специально смешивает определения, концептуальные вопросы, вычисления, анализ псевдокода и доказательства. Ответы не проверяются автоматически: экспортируй TXT и отправь файл мне на проверку.</div>
+ <div id="examQuestions"></div>
+ <div class="exambar"><span class="small" id="examProgress">Заполнено: 0 / 28</span><button class="btn" onclick="exportExam()">Завершить и скачать ответы .txt ↓</button></div>
+ <div id="examToast" class="toast"></div>
+</section>
+
+<div class="profile-modal" id="profileModal" aria-hidden="true"><div class="profile-modal-backdrop" onclick="closeProfileEditor()"></div><section class="profile-modal-card" role="dialog" aria-modal="true" aria-labelledby="editProfileTitle"><button class="modal-close" onclick="closeProfileEditor()" aria-label="Закрыть">×</button><h3 id="editProfileTitle">Настроить профиль</h3><p>Измени имя или фотографию профиля.</p><div class="avatar-edit-row"><img id="avatarPreview" alt="Аватар"/><div><button class="btn secondary" onclick="document.getElementById('avatarFile').click()">Изменить фото</button><button class="text-action" onclick="removeAvatar()">Удалить фото</button></div></div><label for="profileNameInput">ИМЯ</label><input id="profileNameInput" class="answerbox" maxlength="32" placeholder="Твоё имя"><input id="avatarFile" type="file" accept="image/*" hidden onchange="handleAvatarUpload(event)"><div class="profile-modal-actions"><button class="btn secondary" onclick="closeProfileEditor()">Отмена</button><button class="btn" onclick="saveProfile()">Сохранить</button></div><div class="profile-saved" id="profileSaved" aria-live="polite"></div></section></div>
+<nav class="dock" id="mainDock" aria-label="Основная навигация">
+ <span class="dock-active-glow" aria-hidden="true"></span>
+ <button class="dock-item active" data-target="home" onclick="navigate('home')" aria-label="Тесты"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg><span>Тесты</span></button>
+ <button class="dock-item" data-target="exam" onclick="navigate('exam')" aria-label="Контрольная"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4.5h8M8 8.5h8M8 12.5h5M6 3.5h12a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2Z"/></svg><span>Контрольная</span></button>
+ <button class="dock-item" data-target="profile" onclick="navigate('profile')" aria-label="Профиль"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.8-3.5 3.3-5.3 7.5-5.3s6.7 1.8 7.5 5.3"/></svg><span>Профиль</span></button>
+</nav>
+
+</main>
+<svg class="glass-filters" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><filter id="liquidDisplacement" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.018 0.026" numOctaves="2" seed="8" result="noise"/><feGaussianBlur in="noise" stdDeviation="1.1" result="softNoise"/><feDisplacementMap in="SourceGraphic" in2="softNoise" scale="17" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
+<script>
+const bank = [
+{t:"Асимптотика",q:"Что именно утверждает запись f(n) ∈ O(g(n))?",c:["f(n) = g(n) для всех n","Существует c > 0 и n₀, после которых f(n) ≤ c·g(n)","f(n) ≥ c·g(n) при достаточно больших n","f(n) / g(n) стремится к 1"],a:1,e:"O(g(n)) — асимптотическая верхняя оценка: начиная с некоторого n₀, f(n) не превосходит постоянный множитель g(n)."},
+{t:"Асимптотика",q:"Какое обозначение задаёт точный асимптотический порядок роста?",c:["O(g(n))","Ω(g(n))","Θ(g(n))","o(g(n))"],a:2,e:"Θ означает одновременно верхнюю и нижнюю оценку: c₁g(n) ≤ f(n) ≤ c₂g(n) при достаточно больших n."},
+{t:"Асимптотика",q:"Если f(n)=7n³+100n²−4n+9, то f(n) имеет порядок:",c:["Θ(n²)","Θ(n³)","Θ(7ⁿ)","Θ(n⁴)"],a:1,e:"Для многочлена с положительным старшим коэффициентом порядок определяется старшей степенью."},
+{t:"Асимптотика",q:"Как соотносятся log₂n и ln n при n → ∞?",c:["log₂n растёт быстрее","ln n растёт быстрее","Имеют одинаковый Θ-порядок","Их отношение не ограничено"],a:2,e:"По формуле смены основания логарифмы отличаются постоянным множителем."},
+{t:"Асимптотика",q:"Какой порядок роста быстрее?",c:["n log n","n^1.1","Одинаковый","Зависит от основания логарифма"],a:1,e:"Любая положительная степень n^ε в итоге обгоняет логарифм: n log n = o(n^1.1)."},
+{t:"Асимптотика",q:"Какова сложность двух последовательных циклов: первый делает n итераций, второй — n²?",c:["Θ(n³)","Θ(n²)","Θ(n)","Θ(n log n)"],a:1,e:"Последовательные фазы складываются: Θ(n)+Θ(n²)=Θ(n²), а не перемножаются."},
+{t:"Асимптотика",q:"Какова сложность вложенных циклов, каждый из которых выполняется ровно n раз?",c:["Θ(n)","Θ(2n)","Θ(n²)","Θ(log n)"],a:2,e:"Внутреннее тело выполняется n·n раз."},
+{t:"Асимптотика",q:"Сколько бит занимает положительное целое n в двоичной записи?",c:["⌊log₂n⌋","⌊log₂n⌋+1","⌈n/2⌉","log₂(n+1)+1"],a:1,e:"Точная формула из конспекта: b=⌊log₂n⌋+1 (эквивалентно ⌈log₂(n+1)⌉)."},
+{t:"Асимптотика",q:"Что означает Ω(g(n))?",c:["Асимптотическая нижняя оценка","Точная оценка","Верхняя оценка","Среднее время"],a:0,e:"Ω задаёт нижнюю границу: f(n) ≥ c·g(n) для некоторой положительной константы и всех достаточно больших n."},
+{t:"Асимптотика",q:"Как изменится число операций алгоритма Θ(n³), если n увеличить в 2 раза?",c:["Примерно в 2 раза","Примерно в 4 раза","Примерно в 8 раз","Примерно в 16 раз"],a:2,e:"(2n)³/n³=8. Это асимптотическое сравнение, не точный тайминг на любом малом n."},
+{t:"Асимптотика",q:"Введи Θ-порядок суммы 1+2+…+n.",v:["theta(n^2)","θ(n²)","n^2","n²"],e:"Сумма равна n(n+1)/2, поэтому Θ(n²)."},
+{t:"Асимптотика",q:"Введи результат: если f(n)/g(n) → 0, то f растёт … g.",v:["медленнее","медленнее чем","строго медленнее"],e:"Нулевой предел отношения означает, что f растёт строго медленнее g: f=o(g)."},
+{t:"Рекурсии",q:"В Master theorem для T(n)=aT(n/b)+f(n) ключевая сравниваемая функция:",c:["n^a","n^b","n^(log_b a)","b^(log_a n)"],a:2,e:"Критическая функция — n^(log_b a), она отражает суммарную работу листьев рекурсионного дерева."},
+{t:"Рекурсии",q:"T(n)=2T(n/2)+Θ(n). Какова оценка?",c:["Θ(n)","Θ(n log n)","Θ(n²)","Θ(log n)"],a:1,e:"Критическая функция n^(log₂2)=n; f(n)=Θ(n), случай равенства Master theorem: Θ(n log n)."},
+{t:"Рекурсии",q:"T(n)=T(n/2)+Θ(1). Какова оценка?",c:["Θ(1)","Θ(log n)","Θ(n)","Θ(n log n)"],a:1,e:"На каждом уровне константная работа, глубина рекурсии Θ(log n)."},
+{t:"Рекурсии",q:"T(n)=T(n−1)+Θ(1). Какова оценка?",c:["Θ(log n)","Θ(n)","Θ(n log n)","Θ(n²)"],a:1,e:"Есть Θ(n) уровней и постоянная работа на каждом."},
+{t:"Рекурсии",q:"Для T(n)=4T(n/2)+Θ(n), критическая функция равна:",c:["n","n log n","n²","n⁴"],a:2,e:"n^(log₂4)=n². f(n)=Θ(n) полиномиально меньше, значит результат Θ(n²)."},
+{t:"Рекурсии",q:"T(n)=3T(n/3)+Θ(n²). Результат по Master theorem:",c:["Θ(n)","Θ(n log n)","Θ(n²)","Θ(n³)"],a:2,e:"Критическая функция n. f(n)=n² полиномиально больше, при стандартном условии регулярности — Θ(n²)."},
+{t:"Рекурсии",q:"В рекурсивном дереве для T(n)=2T(n/2)+n, сколько уровней до размера 1?",c:["Θ(1)","Θ(log₂n)","Θ(n)","Θ(n log n)"],a:1,e:"Размер подзадачи каждый раз делится на 2, поэтому глубина log₂n."},
+{t:"Рекурсии",q:"Какой метод удобен, чтобы строго доказать найденную оценку подстановкой?",c:["Индукция по n","Сортировка массива","Хеширование","Метод двух указателей"],a:0,e:"Метод подстановки обычно строится как индуктивное предположение и проверка рекуррентного неравенства."},
+{t:"Рекурсии",q:"Введи Θ-оценку: T(n)=T(n−1)+n.",v:["theta(n^2)","θ(n²)","n^2","n²"],e:"Раскрытие даёт 1+2+…+n=Θ(n²)."},
+{t:"Рекурсии",q:"Введи показатель p в критической функции n^p для T(n)=8T(n/2)+n².",v:["3"],e:"p=log₂8=3. Критическая функция n³, которая доминирует над n²."},
+{t:"Сортировки",q:"Какой алгоритм сортировки гарантирует Θ(n log n) в худшем случае и обычно требует Θ(n) дополнительной памяти?",c:["Quicksort","Mergesort","Insertion sort","Selection sort"],a:1,e:"Слияние делит массив пополам, сливает линейно; глубина log n. Для массива нужен дополнительный буфер Θ(n)."},
+{t:"Сортировки",q:"Какова худшая сложность обычной быстрой сортировки при крайне несбалансированных разбиениях?",c:["Θ(n)","Θ(n log n)","Θ(n²)","Θ(log n)"],a:2,e:"Разбиения 0 и n−1 дают сумму n+(n−1)+…+1=Θ(n²)."},
+{t:"Сортировки",q:"Какая сортировка обычно стабильна и работает за Θ(n²) в худшем случае, но за Θ(n) на уже отсортированном массиве?",c:["Insertion sort","Heap sort","Selection sort","Quicksort"],a:0,e:"Сортировка вставками делает мало сдвигов на почти/полностью отсортированном входе."},
+{t:"Сортировки",q:"Какова нижняя оценка для любой сортировки, основанной только на сравнениях?",c:["Ω(n)","Ω(log n)","Ω(n log n)","Ω(n²)"],a:2,e:"Дерево решений должно различить n! перестановок; высота ≥ log₂(n!)=Ω(n log n)."},
+{t:"Сортировки",q:"Какой алгоритм гарантирует Θ(n log n) в худшем случае и может сортировать массив на месте с O(1) дополнительной памятью?",c:["Mergesort","Heapsort","Insertion sort","Counting sort"],a:1,e:"Heapsort строит кучу и извлекает максимум/минимум n раз; дополнительная память O(1), но алгоритм обычно нестабилен."},
+{t:"Сортировки",q:"Что означает стабильность сортировки?",c:["Алгоритм всегда Θ(n log n)","Равные ключи сохраняют взаимный исходный порядок","Алгоритм не использует память","Алгоритм работает одинаково на любом входе"],a:1,e:"Стабильность относится к относительному порядку элементов с равными ключами."},
+{t:"Сортировки",q:"Введи худшую сложность сортировки выбором (selection sort).",v:["theta(n^2)","θ(n²)","n^2","n²"],e:"Сортировка выбором на каждом шаге ищет минимум в оставшейся части: Θ(n²) сравнений во всех случаях."},
+{t:"Сортировки",q:"Counting sort сортирует n ключей из диапазона размера k. Какова стандартная оценка?",c:["Θ(n log n)","Θ(n+k)","Θ(n²)","Θ(k log n)"],a:1,e:"При ограниченном диапазоне ключей подсчёт частот и восстановление ответа занимают Θ(n+k)."},
+{t:"Сортировки",q:"Какой алгоритм из списка обычно НЕ является стабильным в стандартной реализации?",c:["Insertion sort","Merge sort","Heap sort","Bubble sort"],a:2,e:"Стандартный heapsort может менять местами элементы с равными ключами и нарушать их исходный порядок."},
+{t:"Сортировки",q:"Что верно про merge sort?",c:["Худший случай Θ(n²)","Слияние двух отсортированных частей линейно","Он всегда сортирует на месте с O(1) памяти","Его глубина рекурсии Θ(n)"],a:1,e:"При слиянии каждый элемент переносится один раз, поэтому один уровень стоит Θ(n)."},
+{t:"Амортизация",q:"Амортизированная стоимость — это:",c:["Ожидаемое время при случайном входе","Средняя стоимость операции по последовательности без вероятностной модели","Худшая стоимость одной операции","Время только самой дешёвой операции"],a:1,e:"В конспекте амортизация — гарантия для любой последовательности операций, а не вероятностное среднее."},
+{t:"Амортизация",q:"Динамический массив удваивает ёмкость при заполнении. Какова амортизированная стоимость append?",c:["Θ(n)","Θ(log n)","O(1)","Θ(n log n)"],a:2,e:"Суммарные копирования за n вставок образуют геометрическую сумму <2n, вместе с n записей получаем O(n) суммарно."},
+{t:"Амортизация",q:"Какой из методов НЕ является стандартным методом амортизированного анализа из конспекта?",c:["Агрегированный","Бухгалтерский","Потенциальный","Метод Монте-Карло"],a:3,e:"В конспекте перечислены агрегированный, бухгалтерский и потенциальный методы."},
+{t:"Амортизация",q:"Формула амортизированной стоимости через потенциал:",c:["ĉᵢ=cᵢ−Φ(Dᵢ)","ĉᵢ=cᵢ+Φ(Dᵢ)−Φ(Dᵢ₋₁)","ĉᵢ=Φ(Dᵢ)/cᵢ","ĉᵢ=cᵢ·ΔΦ"],a:1,e:"К реальной стоимости прибавляется изменение потенциала: ĉᵢ=cᵢ+ΔΦᵢ."},
+{t:"Амортизация",q:"Для двоичного счётчика потенциал равен числу единичных битов. При инкременте с t младшими единицами реальная стоимость:",c:["t","t+1","2t","1"],a:1,e:"t единиц превращаются в нули, следующий ноль — в единицу: меняется t+1 битов."},
+{t:"Амортизация",q:"Если каждая из m операций имеет амортизированную стоимость не более A, а начальный потенциал 0 и потенциал неотрицателен, то суммарная реальная стоимость:",c:["Не больше A·m","Не меньше A·m","Всегда равна A","Может быть экспоненциальной"],a:0,e:"Телескопическая сумма даёт Σcᵢ ≤ Σĉᵢ ≤ A·m."},
+{t:"Амортизация",q:"Очередь реализована двумя стеками: каждый элемент перекладывается из inStack в outStack не более одного раза. Почему dequeue амортизированно O(1)?",v:["каждый элемент перекладывается не более одного раза","каждый элемент перемещается один раз","потому что переносы суммарно линейны"],e:"За всю последовательность каждый элемент максимум один раз перекладывается, поэтому суммарная работа линейна по числу операций."},
+{t:"Splay",q:"Что отличает splay-дерево от AVL-дерева?",c:["У splay нет свойства BST","Splay — самонастраивающееся дерево без жёсткого ограничения баланса после каждой операции","Splay всегда имеет высоту log n","Splay не использует повороты"],a:1,e:"Splay поднимает посещённый узел в корень серией поворотов; гарантии обычно амортизированные."},
+{t:"Splay",q:"Как называется шаг, когда узел x и его родитель — левый ребёнок деда, и оба поворота выполняются в одном направлении?",c:["Zig-zag","Zig-zig","Merge","Split"],a:1,e:"Zig-zig — два последовательных поворота в одном направлении (например, левый-левый)."},
+{t:"Splay",q:"Какова амортизированная сложность поиска в splay-дереве?",c:["O(1)","O(log n)","O(n²)","O(n) строго для каждой операции"],a:1,e:"Стандартная амортизированная оценка — O(log n), хотя отдельная операция может быть линейной."},
+{t:"Splay",q:"Введи название шага, если x — левый ребёнок родителя, но родитель — правый ребёнок деда (разные направления).",v:["zig-zag","zigzag"],e:"Это zig-zag: сначала поворот вокруг родителя, затем вокруг деда."}
+,
+{t:"Master theorem · вычисления",q:"Для T(n)=8T(n/2)+n² найди критическую функцию и итоговую оценку.",v:["theta(n^3)","θ(n³)","n^3","n³"],e:"a=8, b=2, d=2. b^d=4, a>b^d, третий случай: Θ(n^(log₂8))=Θ(n³)."},
+{t:"Master theorem · вычисления",q:"Для T(n)=4T(n/2)+n² укажи итоговую Θ-оценку.",v:["theta(n^2logn)","theta(n^2 log n)","θ(n² log n)","n^2logn"],e:"a=4, b=2, d=2. b^d=4=a, второй случай: Θ(n² log n)."},
+{t:"Master theorem · вычисления",q:"Для T(n)=3T(n/2)+n найди показатель p в n^p критической функции.",v:["log2(3)","log_2 3","1.58496","1.585"],e:"p=log_b a=log₂3≈1.585."},
+{t:"Master theorem · понимание",q:"В записи T(n)=aT(n/b)+f(n), если f(n)=Θ(n^d), какой тест определяет три случая в данной формулировке конспекта?",c:["Сравнить a и b^d","Сравнить a и d","Сравнить b и d","Сравнить n и a"],a:0,e:"В конспекте случаи заданы сравнением a с b^d: меньше, равно или больше."},
+{t:"Амортизация · вычисления",q:"У динамического массива ёмкость удваивается. При n=16 вставках с начальной ёмкостью 1 сколько всего старых элементов будет скопировано при расширениях?",v:["15"],e:"Копируются массивы размеров 1,2,4,8. Сумма 1+2+4+8=15."},
+{t:"Амортизация · доказательство",q:"Массив расширяется на 1 каждый раз. Введи Θ-оценку суммарной стоимости n append, если при расширении копируются все старые элементы.",v:["theta(n^2)","θ(n²)","n^2"],e:"Копирования: 1+2+…+(n−1)=Θ(n²), поэтому амортизированная стоимость append здесь Θ(n), а не O(1)."},
+{t:"Амортизация · потенциал",q:"Реальная стоимость c=11, потенциал изменился на ΔΦ=−7. Найди амортизированную стоимость.",v:["4"],e:"ĉ=c+ΔΦ=11−7=4."},
+{t:"Амортизация · потенциал",q:"Для двоичного счётчика перед Increment есть t=4 младших единицы. Найди реальную стоимость изменения битов.",v:["5"],e:"Четыре единицы сбрасываются и следующий нулевой бит становится единицей: c=t+1=5."},
+{t:"Амортизация · взвешенный счётчик",q:"Во взвешенном счётчике t=3 младших единиц. По конспекту найди амортизированную стоимость Increment.",v:["8","2(t+1)","2(3+1)"],e:"ĉ=2(t+1)=2·4=8. Реальная стоимость 10, ΔΦ=−2."},
+{t:"Амортизация · метод",q:"Вставки в динамический массив с удвоением. Какую амортизированную стоимость одной вставки показывает агрегированный анализ?",v:["o(1)","theta(1)","θ(1)","o(1) амортизированно"],e:"За n вставок суммарно Θ(n): n записей плюс геометрическая сумма копирований. На одну операцию приходится O(1)."},
+{t:"Splay · лемма доступа",q:"В splay-дереве n=256, узел x — лист. Чему равна верхняя оценка числа поворотов по лемме доступа из конспекта?",v:["25","3*8+1","3·8+1"],e:"3(log₂256−log₂1)+1=3·8+1=25."},
+{t:"Splay · потенциал",q:"Введи формулу потенциала splay-дерева через размеры поддеревьев.",v:["sum log2 size(v)","Σlog2size(v)","сумма log2 size(v)"],e:"Φ(T)=Σ_{v∈T} log₂ size(v). Ранг узла r(v)=log₂ size(v)."}
+
+];
+const exam = [
+{section:"I. Основы анализа и асимптотика",desc:"Размер входа, базовая операция, определения и сравнение порядков.",items:[
+["Объясни разницу между временной и пространственной эффективностью. Что именно считается дополнительной памятью? Приведи пример, где эти показатели различаются по смыслу.","Развёрнутый ответ"],
+["Для алгоритма, который проверяет, простое ли целое N, объясни, почему размер входа обычно корректнее измерять количеством бит числа, а не самим значением N. Запиши формулу числа бит и объясни её.","Теория + формула"],
+["Дай формальные определения O(g(n)), Ω(g(n)) и Θ(g(n)) через константы и n₀. Объясни, почему запись O(n²) сама по себе не означает, что функция обязательно квадратичная.","Определения"],
+["Упорядочи по возрастанию скорости роста: log n, n^1.5, n log n, 2^n, n², n!, n. Для каждой соседней пары кратко обоснуй сравнение.","Сравнение функций"],
+["Алгоритм выполняет сначала 4n²+3n операций, затем 100n log₂n операций. Найди асимптотическую сложность всей программы и объясни, почему этапы складываются, а не перемножаются.","Вычисление + объяснение"]
+]},
+{section:"II. Рекуррентные соотношения и Master theorem",desc:"Критическая функция, случаи теоремы, рекурсивное дерево и раскрытие рекурсии.",items:[
+["Сформулируй Master theorem для T(n)=aT(n/b)+f(n). Определи критическую функцию и опиши три основных случая сравнения f(n) с ней.","Теория"],
+["Реши T(n)=4T(n/2)+n. Покажи вычисление критического показателя, сравнение с f(n) и итоговую оценку.","Решение по Master theorem"],
+["Реши T(n)=T(n/2)+1. Объясни ответ через высоту рекурсии, а не только назови формулу.","Рекурсивное дерево"],
+["Реши T(n)=T(n−1)+n, раскрыв рекурсию до суммы. Укажи точную сумму и Θ-оценку.","Раскрытие рекурсии"],
+["Почему Master theorem нельзя механически применять к любой рекурсии? Назови ограничения стандартной формы и приведи пример рекурсии, которая не имеет вида aT(n/b)+f(n).","Понимание метода"],
+["Примени Master theorem к T(n)=4T(n/2)+n³. Выпиши a,b,d, сравни a и b^d, назови случай и итоговую оценку.","Вычисление · случай 1"],
+["Примени Master theorem к T(n)=4T(n/2)+n². Обязательно вычисли b^d и объясни, почему появляется дополнительный множитель log n.","Вычисление · случай 2"],
+["Примени Master theorem к T(n)=3T(n/2)+n. Найди log₂3 и объясни, почему итоговая степень не является целым числом.","Вычисление · случай 3"]
+]},
+{section:"III. Сортировки",desc:"Сложность, свойства, нижняя оценка и выбор алгоритма.",items:[
+["Сравни insertion sort, merge sort, quicksort и heapsort по лучшему/среднему/худшему времени, дополнительной памяти и стабильности. Если свойство зависит от реализации — укажи это.","Сравнительная таблица текстом"],
+["Почему сортировка сравнением не может в общем случае работать быстрее Ω(n log n)? Объясни идею дерева решений и роль n! листьев.","Доказательство идеи"],
+["Массив почти отсортирован. Какую сортировку из изученных разумно выбрать и почему? А если нужна гарантированная Θ(n log n) в худшем случае и O(1) дополнительной памяти? Обоснуй оба выбора.","Применение"],
+["Quicksort каждый раз выбирает опорный элемент так, что одна часть пуста, а другая содержит n−1 элементов. Запиши рекурсию и реши её. Сравни с равными разбиениями.","Рекурсия сортировки"]
+]},
+{section:"IV. Амортизационный анализ",desc:"Различие видов анализа, динамический массив, потенциал и методы.",items:[
+["Чётко различи худший случай, средний случай и амортизированную стоимость. Почему амортизированная O(1) не означает, что каждая операция занимает O(1)?","Теория"],
+["Динамический массив начинает с ёмкости 1 и удваивает её при заполнении. Для n добавлений оцени суммарное число копирований через геометрическую сумму и выведи амортизированную стоимость append.","Вычисление"],
+["Запиши формулу потенциального метода ĉᵢ=cᵢ+Φ(Dᵢ)−Φ(Dᵢ₋₁). Выведи телескопическую сумму и объясни, при каких условиях она даёт верхнюю оценку реальной стоимости.","Формула + вывод"],
+["Для двоичного счётчика возьми потенциал Φ = число единичных битов. Если перед Increment имеется t младших единиц, найди реальную стоимость c, изменение потенциала ΔΦ и амортизированную стоимость ĉ. Объясни результат.","Вычисление + объяснение"],
+["Очередь реализована двумя стеками S_in и S_out. Докажи амортизированную O(1) для enqueue/dequeue агрегированным методом: оцени суммарное число push/pop за m операций и объясни, почему каждый элемент перекладывается не более одного раза.","Доказательство · агрегированный метод"],
+["Для той же очереди докажи амортизированную O(1) бухгалтерским методом. Назначь стоимость операций так, чтобы дешёвые enqueue создавали кредит на будущий перенос; покажи, кто оплачивает переливание k элементов.","Доказательство · бухгалтерский метод"],
+["Для очереди на двух стеках выбери потенциал Φ=|S_in|. Вычисли амортизированную стоимость enqueue, обычного dequeue и dequeue с переливанием k элементов. Объясни, почему потенциал неотрицателен и почему оценка O(1) получается.","Доказательство · потенциальный метод"],
+["Массив расширяется на 1 при каждом переполнении. Докажи, что никакой корректный неотрицательный потенциал не может показать O(1) амортизированную стоимость append. Используй противоречие через суммарную реальную стоимость.","Доказательство невозможности"]
+]},
+{section:"V. Splay-деревья",desc:"Самонастройка, типы поворотов и амортизированная гарантия.",items:[
+["Объясни идею splay-дерева. Что происходит после успешного поиска и после неуспешного поиска? Чем такая стратегия отличается от поддержания строгого баланса в AVL-дереве?","Теория"],
+["Опиши zig, zig-zig и zig-zag. Для каждого случая объясни взаимное положение x, родителя и деда до поворотов.","Структурный ответ"],
+["Почему утверждение «каждая операция в splay-дереве занимает O(log n)» неверно, хотя амортизированная оценка поиска O(log n)? Объясни разницу между одной операцией и последовательностью.","Понимание гарантии"]
+]}
+];
+let quiz=[],qi=0,selected=null,checked=false,score=0,answered=0;
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+
+const PROFILE_KEY='algo_profile_name_v1', AVATAR_KEY='algo_profile_avatar_v1', STATS_KEY='algo_training_stats_v1', EXAM_KEY='algo_exam_answers_v1';
+function readStats(){try{return JSON.parse(localStorage.getItem(STATS_KEY))||{attempts:0,best:0,last:null,history:[],examExports:0,examProgress:0}}catch(e){return {attempts:0,best:0,last:null,history:[],examExports:0,examProgress:0}}}
+function writeStats(s){localStorage.setItem(STATS_KEY,JSON.stringify(s))}
+function updateProfile(){
+ const name=localStorage.getItem(PROFILE_KEY)||'',shown=name.trim()||'Ученик',s=readStats(),history=s.history||[];
+ const greet=document.getElementById('profileGreeting');if(greet)greet.textContent=shown;
+ const avatar=document.getElementById('profileAvatar'),photo=localStorage.getItem(AVATAR_KEY);if(avatar){avatar.innerHTML='';if(photo){const img=document.createElement('img');img.src=photo;img.alt='Аватар профиля';avatar.appendChild(img)}else avatar.textContent=(name.trim()[0]||'?').toUpperCase()}
+ const dateEl=document.getElementById('profileDate');if(dateEl)dateEl.textContent=new Date().toLocaleDateString('ru-RU',{weekday:'long',day:'numeric',month:'short'});
+ const attempts=history.length,avg=attempts?Math.round(history.reduce((a,x)=>a+(x.percent??(x.score/x.total*100)),0)/attempts):null;
+ document.getElementById('statAttempts').textContent=attempts;
+ document.getElementById('statBest').textContent=attempts?(Math.max(...history.map(x=>x.percent??Math.round(x.score/x.total*100)))+'%'):'—';
+ document.getElementById('statAvg').textContent=avg===null?'—':avg+'%';
+ document.getElementById('statLast').textContent=s.last?(s.last.score+'/'+s.last.total):'—';
+ document.getElementById('statLastDate').textContent=s.last?s.last.date:'пока нет результатов';
+ document.getElementById('statExam').textContent=(s.examProgress||0)+'%';
+ document.getElementById('statExamFoot').textContent='Заполнено ответов контрольной';
+ const bar=document.getElementById('profileExamBar');if(bar)bar.style.width=(s.examProgress||0)+'%';
+ const hist=document.getElementById('profileHistory');if(hist)hist.textContent=history.length?history.slice(-5).reverse().map(x=>x.date+' · '+x.score+'/'+x.total+' ('+(x.percent??Math.round(x.score/x.total*100))+'%)').join('  /  '):'Пройди тест, и здесь появятся результаты.';
+ const cal=document.getElementById('profileCalendar');if(cal){cal.innerHTML='';const counts={};history.forEach(x=>{const d=x.isoDate||x.dateISO;if(d)counts[d]=(counts[d]||0)+1});const today=new Date();today.setHours(0,0,0,0);const start=new Date(today);start.setDate(today.getDate()-83);for(let i=0;i<84;i++){const d=new Date(start);d.setDate(start.getDate()+i);const key=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');const n=counts[key]||0,cell=document.createElement('i');if(n)cell.className='level'+Math.min(4,n);cell.title=key+': '+n+' тест(ов)';cal.appendChild(cell)}}
+}
+function openProfileEditor(){const modal=document.getElementById('profileModal');document.getElementById('profileNameInput').value=localStorage.getItem(PROFILE_KEY)||'';renderAvatarPreview();modal.classList.add('open');modal.setAttribute('aria-hidden','false');setTimeout(()=>document.getElementById('profileNameInput').focus(),80)}
+function closeProfileEditor(){const modal=document.getElementById('profileModal');modal.classList.remove('open');modal.setAttribute('aria-hidden','true')}
+function renderAvatarPreview(){const img=document.getElementById('avatarPreview'),photo=localStorage.getItem(AVATAR_KEY);img.src=photo||('data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><rect width="100%" height="100%" fill="#789cc4"/><text x="50%" y="57%" text-anchor="middle" font-size="34" fill="#142033">'+((localStorage.getItem(PROFILE_KEY)||'?')[0]||'?')+'</text></svg>'))}
+function handleAvatarUpload(event){const file=event.target.files&&event.target.files[0];if(!file)return;if(!file.type.startsWith('image/'))return;const reader=new FileReader();reader.onload=()=>{const img=new Image();img.onload=()=>{const c=document.createElement('canvas'),max=320,scale=Math.min(1,max/Math.max(img.width,img.height));c.width=Math.round(img.width*scale);c.height=Math.round(img.height*scale);c.getContext('2d').drawImage(img,0,0,c.width,c.height);try{localStorage.setItem(AVATAR_KEY,c.toDataURL('image/jpeg',.82));renderAvatarPreview()}catch(e){alert('Не удалось сохранить фото: выбери изображение меньшего размера.')}};img.src=reader.result};reader.readAsDataURL(file)}
+function removeAvatar(){localStorage.removeItem(AVATAR_KEY);renderAvatarPreview()}
+function saveProfile(){const val=document.getElementById('profileNameInput').value.trim().slice(0,32);localStorage.setItem(PROFILE_KEY,val);updateProfile();document.getElementById('profileSaved').textContent='Профиль сохранён.';setTimeout(closeProfileEditor,450)}
+function moveDock(target){const items=[...document.querySelectorAll('.dock-item')],idx=Math.max(0,items.findIndex(b=>b.dataset.target===target));const glow=document.querySelector('.dock-active-glow');if(glow)glow.style.transform='translateX(calc('+idx+' * (100% + 5px)))';items.forEach(b=>b.classList.toggle('active',b.dataset.target===target));}
+function navigate(target){if(target==='exam')startExam();else show(target);moveDock(target);if(target==='profile')updateProfile();}
+const originalShow=show;
+show=function(id){originalShow(id);moveDock(id==='quiz'?'home':id);if(id==='profile')updateProfile()};
+const dockEl=document.getElementById('mainDock');if(dockEl){dockEl.addEventListener('pointermove',e=>{const r=dockEl.getBoundingClientRect();dockEl.style.setProperty('--dock-x',((e.clientX-r.left)/r.width*100)+'%');dockEl.style.setProperty('--dock-y',((e.clientY-r.top)/r.height*100)+'%')});dockEl.addEventListener('pointerleave',()=>{dockEl.style.setProperty('--dock-x','50%');dockEl.style.setProperty('--dock-y','0%')});}
+
+function goHome(){show('home')}
+function shuffle(a){let x=[...a];for(let i=x.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[x[i],x[j]]=[x[j],x[i]]}return x}
+function startQuiz(){quiz=shuffle(bank);qi=0;score=0;answered=0;show('quiz');document.getElementById('quizEnd').classList.add('hidden');renderQuiz()}
+function renderQuiz(){
+ const q=quiz[qi];selected=null;checked=false;
+ document.getElementById('quizCount').textContent=String(qi+1).padStart(2,'0')+" / "+quiz.length;
+ document.getElementById('quizProgress').style.width=(qi/quiz.length*100)+"%";
+ document.getElementById('qTopic').textContent=q.t;document.getElementById('qType').textContent=q.c?'Выбор ответа':'Свободный ввод';
+ document.getElementById('qText').textContent=q.q;document.getElementById('qFeedback').className='feedback';document.getElementById('qStatus').textContent='Ответь, чтобы продолжить';
+ document.getElementById('checkBtn').classList.remove('hidden');document.getElementById('nextBtn').classList.add('hidden');
+ const choices=document.getElementById('qChoices');choices.innerHTML='';
+ if(q.c){document.getElementById('qInputWrap').classList.add('hidden');q.c.forEach((v,i)=>{let b=document.createElement('button');b.className='choice';b.innerHTML='<span class="letter">'+String.fromCharCode(65+i)+'</span><span></span>';b.querySelector('span:last-child').textContent=v;b.onclick=()=>{if(!checked){selected=i;choices.querySelectorAll('.choice').forEach(z=>z.classList.remove('selected'));b.classList.add('selected')}};choices.appendChild(b)})}
+ else{document.getElementById('qInputWrap').classList.remove('hidden');document.getElementById('qInput').value='';}
+}
+function norm(s){return s.toLowerCase().replaceAll('θ','theta').replaceAll('ω','omega').replaceAll('²','^2').replaceAll('³','^3').replaceAll('₀','0').replace(/\s+/g,'').replace(/[{}]/g,'').replace(/\\left|\\right/g,'').replace(/\\/g,'').replace(/,/g,'.')}
+function checkQuiz(){
+ if(checked)return;let q=quiz[qi],ok=false;
+ if(q.c){if(selected===null){document.getElementById('qStatus').textContent='Сначала выбери вариант';return}ok=selected===q.a;document.querySelectorAll('.choice').forEach((b,i)=>{if(i===q.a)b.classList.add('correct');else if(i===selected)b.classList.add('wrong')})}
+ else{let val=document.getElementById('qInput').value.trim();if(!val){document.getElementById('qStatus').textContent='Введи ответ';return}ok=(q.v||[]).some(x=>norm(val)===norm(x))}
+ checked=true;answered++;if(ok)score++;
+ const fb=document.getElementById('qFeedback');fb.className='feedback show '+(ok?'good':'bad');document.getElementById('fbTitle').textContent=ok?'Верно ✓':'Не совсем. Правильная идея:';
+ document.getElementById('fbText').textContent=q.e+(q.c&&!ok?' Правильный вариант: '+q.c[q.a]:(!q.c&&!ok?' Пример принимаемого ответа: '+q.v[0]:''));document.getElementById('qStatus').textContent=ok?'Ответ засчитан':'Ответ не засчитан';
+ document.getElementById('checkBtn').classList.add('hidden');document.getElementById('nextBtn').classList.remove('hidden');document.getElementById('nextBtn').textContent=qi===quiz.length-1?'Посмотреть результат →':'Следующий вопрос →';
+}
+function nextQuiz(){if(!checked)return;qi++;if(qi>=quiz.length){
+ const st=readStats(),pct=Math.round(score/quiz.length*100),date=new Date().toLocaleDateString('ru-RU');
+ st.attempts=(st.attempts||0)+1;st.best=Math.max(st.best||0,pct);st.last={score:score,total:quiz.length,date:date};
+ st.history=st.history||[];st.history.push({score:score,total:quiz.length,percent:pct,date:date,isoDate:new Date().toISOString().slice(0,10)});if(st.history.length>30)st.history=st.history.slice(-30);writeStats(st);
+ document.getElementById('quizProgress').style.width='100%';document.querySelector('.card').classList.add('hidden');let e=document.getElementById('quizEnd');e.classList.remove('hidden');e.innerHTML='<h3>Тест завершён</h3><p>Результат: <b style="color:var(--accent)">'+score+' / '+quiz.length+'</b> ('+Math.round(score/quiz.length*100)+'%).</p><p>Ошибки — не просто потерянные баллы: вернись к объяснениям, затем пройди тест ещё раз.</p><button class="btn" onclick="document.querySelector(\'.card\').classList.remove(\'hidden\');startQuiz()">Пройти заново ↻</button> <button class="btn secondary" onclick="goHome()">На главную</button>';return}renderQuiz()}
+function startExam(){show('exam');renderExam()}
+function renderExam(){let root=document.getElementById('examQuestions');root.innerHTML='';let n=0;let savedAnswers={};try{savedAnswers=JSON.parse(localStorage.getItem(EXAM_KEY)||'{}')}catch(e){}exam.forEach((s,si)=>{let sec=document.createElement('div');sec.className='section';sec.innerHTML='<h3>'+s.section+'</h3><p>'+s.desc+'</p>';root.appendChild(sec);s.items.forEach((it,ii)=>{n++;let d=document.createElement('div');d.className='task';d.innerHTML='<div class="taskno">ЗАДАНИЕ '+String(n).padStart(2,'0')+' / '+it[1].toUpperCase()+'</div><h4></h4><div class="hint">Раздел: '+s.section+'</div><textarea class="answerbox" data-n="'+n+'" placeholder="Запиши ход рассуждений и ответ…"></textarea>';d.querySelector('h4').textContent=it[0];const ta=d.querySelector('textarea');ta.value=savedAnswers[n]||'';root.appendChild(d)})});root.querySelectorAll('textarea').forEach(x=>x.addEventListener('input',updateExamProgress));updateExamProgress()}
+function updateExamProgress(){let a=[...document.querySelectorAll('#examQuestions textarea')];let saved={};a.forEach(x=>saved[x.dataset.n]=x.value);localStorage.setItem(EXAM_KEY,JSON.stringify(saved));let filled=a.filter(x=>x.value.trim()).length;document.getElementById('examProgress').textContent='Заполнено: '+filled+' / '+a.length;
+ let st=readStats();st.examProgress=Math.round(filled/Math.max(1,a.length)*100);writeStats(st);
+}
+function exportExam(){let answers=[...document.querySelectorAll('#examQuestions textarea')];let out='КОНТРОЛЬНАЯ РАБОТА — АНАЛИЗ АЛГОРИТМОВ\nУченик: '+(localStorage.getItem(PROFILE_KEY)||'не указано')+'\nДата: '+new Date().toLocaleString('ru-RU')+'\n\n';let k=0;exam.forEach(s=>{out+='\\n'+'='.repeat(72)+'\\n'+s.section.toUpperCase()+'\\n'+'='.repeat(72)+'\\n';s.items.forEach(it=>{let val=answers[k]?.value.trim()||'[ОТВЕТ НЕ ДАН]';out+='\\nЗадание '+(k+1)+': '+it[0]+'\\n\\nОТВЕТ:\\n'+val+'\\n';k++})});out+='\\n\\nКонец работы. Всего заданий: '+k+'.\\n';let blob=new Blob([out],{type:'text/plain;charset=utf-8'});let url=URL.createObjectURL(blob);let a=document.createElement('a');a.href=url;a.download='kontrolnaya_algoritmy_otvety.txt';a.click();URL.revokeObjectURL(url);let st=readStats();st.examExports=(st.examExports||0)+1;st.examProgress=Math.round(answers.filter(x=>x.value.trim()).length/Math.max(1,answers.length)*100);writeStats(st);updateProfile();document.getElementById('examToast').textContent='Файл сформирован. Загрузи его в чат для проверки.'}
+updateProfile();
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProfileEditor()});
+moveDock('home');
+// Decorative activity dots.
+for(const id of ["heatA","heatB","heatC"]){const el=document.getElementById(id);if(el){for(let i=0;i<27;i++){const dot=document.createElement("i");el.appendChild(dot)}}}
+</script></body></html>
